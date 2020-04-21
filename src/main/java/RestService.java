@@ -20,8 +20,8 @@ public class RestService {
         context.setContextPath("/");
         Server jettyServer = new Server();
 
-        int secureport = 8090;
-        int port = 8091;
+        int secureport = 8070;
+        int port = 8071;
 
         //http
         HttpConfiguration http = new HttpConfiguration();

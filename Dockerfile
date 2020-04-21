@@ -10,6 +10,6 @@ RUN mvn -f /home/app/pom.xml clean package
 # Package stage
 #
 FROM openjdk:11-jre-slim
-COPY --from=build /home/app/target/noots-1.0-SNAPSHOT-jar-with-dependencies.jar /usr/local/lib/noots-1.0-SNAPSHOT-jar-with-dependencies.jar
-EXPOSE 8091
-ENTRYPOINT ["java","-jar","/usr/local/lib/noots-1.0-SNAPSHOT-jar-with-dependencies.jar"]
+COPY --from=build /home/app/target/trends-1.0-SNAPSHOT-jar-with-dependencies.jar /usr/local/lib/trends-1.0-SNAPSHOT-jar-with-dependencies.jar
+EXPOSE 8071
+ENTRYPOINT ["java","-jar","/usr/local/lib/trends-1.0-SNAPSHOT-jar-with-dependencies.jar"]
